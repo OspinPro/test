@@ -1,0 +1,118 @@
+body {
+  background: #f3f0e7;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+.map-container {
+  position: relative;
+  margin: 30px auto;
+  max-width: 841px;
+  width: 100%;
+}
+.map-item {
+  transition:2s;
+  position: absolute;
+  opacity: 0;
+}
+.map-item--active {
+  opacity: 1;
+}
+.map-item i {
+  background: #fcf60a;
+  position: relative;
+  box-shadow: 2px 3px 5px rgba(0,0,0,.3);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: block;
+}
+.map-item i:before {
+  content: '';
+  background: #fff;
+  border-radius: 50%;
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  left: calc(50% - 1px);
+  top: calc(50% - 1px);
+}
+.map-item span {
+  position: absolute;
+  background: #fff;
+  padding: 2px 10px;
+  box-shadow: 0 0 9px rgba(0,0,0,.1);
+  font-style: italic;
+  font-family: sans-serif;
+  font-size: 11px;
+  line-height: 1;
+  left: 50%;
+  bottom: 18px;
+  white-space: nowrap;
+  transform: translate(-50%,0);
+}
+.map-item span:before {
+  content: '';
+  border-width: 6px;
+  border-style: solid;
+  border-color: #fff transparent transparent;
+  position: absolute;
+  bottom: -12px;
+  left: calc(50% - 5px);
+}
+.map-item--leftCorrect {}
+.map-item--leftCorrect span {left: calc(50% - 100px);}
+.map-item--leftCorrect:before {
+  content: '';
+  background: #222;
+  width: 55px;
+  height: 1px;
+  position: absolute;
+  right: 130%;
+  top: -5px;
+  transform: rotate(14deg);
+}
+.map-item--leftCorrect:after {
+  content: '';
+  border-width: 3px 10px;
+  border-style: solid;
+  border-color: transparent transparent transparent #333;
+  top: 0px;
+  left: -12px;
+  position: absolute;
+  transform: rotate(14deg);
+}
+
+.map-zone {
+  transition:2s;
+  position: absolute;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 2px 3px 5px rgba(0,0,0,.3);
+  padding: 5px;
+  line-height: 1;
+  width: 90px;
+  height: 90px;
+}
+.map-zone--active {
+  opacity: 1;
+}
+
+.map-btn {
+  border: none;
+  display: block;
+  cursor: pointer;
+  background: red;
+  color: #fff;
+  margin: 30px auto;
+  font-size: 20px;
+  width: 200px;
+  line-height: 60px;
+  height: 60px;
+  padding: 0;
+  text-align: center;
+}
+.map-btn:hover {
+  opacity: .8;
+}
